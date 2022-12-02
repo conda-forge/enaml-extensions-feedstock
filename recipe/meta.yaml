@@ -1,5 +1,5 @@
 {% set name = "enaml-extensions" %}
-{% set version = "0.3.11" %}
+{% set version = "0.3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/enaml-extensions-{{ version }}.tar.gz
-  sha256: 9dfd268f75150c466f4c9e6c54b09fc4d9b85672c41d70659bb7b221a4f452d9
+  sha256: 85cf5fff4b6cfed61cf6a4f3636e8a054bfdbd6e1a3238d264436af15c880e01
 
 build:
   number: 0
