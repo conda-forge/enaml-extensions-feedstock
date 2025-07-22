@@ -1,5 +1,6 @@
 {% set name = "enaml-extensions" %}
 {% set version = "0.4.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -17,20 +18,20 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - setuptools >=30.3.0
     - setuptools-scm
   run:
     - enaml
     - numpy
     - pip
-    - python
+    - python >={{ python_min }}
     - qscintilla2
     - qtpy
 
 test:
   requires:
-    - python
+    - python {{ python_min }}
   imports:
     - enamlext
 
