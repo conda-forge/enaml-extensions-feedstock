@@ -17,20 +17,20 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python
     - setuptools >=30.3.0
     - setuptools-scm
   run:
     - enaml
     - numpy
     - pip
-    - python >={{ python_min }}
+    - python
     - qscintilla2
     - qtpy
 
 test:
   requires:
-    - python {{ python_min }}
+    - python
   imports:
     - enamlext
 
