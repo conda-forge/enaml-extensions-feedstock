@@ -1,6 +1,5 @@
 {% set name = "enaml-extensions" %}
-{% set version = "0.4.5" %}
-{% set python_min = "3.10" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,26 +7,25 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 86c3047180379c7c2aa54eb0ab09fb6af4748d16120bbac1c10d7d31c58580af
+  sha256: ae94152c6de79cdd81e90b5fca9b0ec3690a0b01bcdfa057845e4b11152b3872
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools >=30.3.0
-    - setuptools-scm
+    - hatchling >=1.27
+    - hatch-vcs >=0.5
   run:
-    - enaml
-    - numpy
-    - pip
     - python >={{ python_min }}
-    - qscintilla2
-    - qtpy
+    - atom >=0.12
+    - enaml >=0.19
+    - numpy >=1.26
+    - qtpy >=2.4
 
 test:
   requires:
@@ -36,7 +34,7 @@ test:
     - enamlext
 
 about:
-  home: http://github.com/gabrielcnr/enaml-extensions
+  home: https://github.com/gabrielcnr/enaml-extensions
   summary: Extra widgets and extensions for building UIs with Enaml
   license: MIT
   license_file: LICENSE
