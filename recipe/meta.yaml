@@ -1,13 +1,13 @@
 {% set name = "enaml-extensions" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: ae94152c6de79cdd81e90b5fca9b0ec3690a0b01bcdfa057845e4b11152b3872
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: a389ed23c6fa2be9134e26f8e6a960690f0e1ff1ed1b70b3abe6b29dcdb0a84e
 
 build:
   number: 0
