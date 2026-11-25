@@ -3,7 +3,7 @@ About enaml-extensions-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/enaml-extensions-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/gabrielcnr/enaml-extensions
+Home: https://github.com/gabrielcnr/enaml-extensions
 
 Package license: MIT
 
